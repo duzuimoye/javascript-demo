@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>点击按钮弹窗</title>
+    <style>
+         button{
+            display: none;
+            background-color: red;
+            color: #fff;
+            font-size: 18px;
+            width: 100px;
+            height: 50px;
+            margin-top:15px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="change" onmousemove="show()" onmouseout="hide()">鼠标经过出现按钮</div>
+        <button id="button" onclick="addToal()" value="锐雯名言">按钮</button>
+    </div>
+    
+</body>
+<script>
+    function addToal() {
+        alert('断剑重铸之日 骑士归来之士')
+    }
+    function show() {
+        var obj = document.getElementById('button');
+        obj.style.display='block';
+        var obj3 = document.getElementById('change');
+        obj3.style.backgroundColor = 'red';
+        obj3.style.width = '200px';
+        obj3.style.height= '100px'
+    }
+    function hide() {
+        var obj2 = document.getElementById('button');
+        obj2.style.display = 'none';
+        var obj4 = document.getElementById('change');
+        obj4.style.backgroundColor = 'white';
+    }
+</script>
+</html>
